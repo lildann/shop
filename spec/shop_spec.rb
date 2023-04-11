@@ -16,6 +16,14 @@ describe Shop do
     expect(shop.checkout('aBc')).to eq(-1)
   end
 
+  it "should return -1 if input not a string" do
+    expect(shop.checkout(18)).to eq(-1)
+  end
+
+  it "should return -1 if grammatical character is included" do
+    expect(shop.checkout('A-B')).to eq(-1)
+  end
+
   it "should return a total for more than one sku" do
     expect(shop.checkout('AA')).to eq(100)
   end

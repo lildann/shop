@@ -11,7 +11,11 @@ class Shop
   end
 
   def checkout(skus)
-    return -1 if skus != skus.upcase
+
+    return -1 unless skus.is_a?(String)
+    return -1 unless skus == skus.upcase 
+    return -1 if skus.include?("-")
+    
     deal_A(skus.count("A"))
     deal_B(skus.count("B"))
 
