@@ -16,4 +16,21 @@ describe Shop do
     expect(shop.checkout('aBc')).to eq(-1)
   end
 
+  it "should return a total for more than one sku" do
+    expect(shop.checkout('AA')).to eq(100)
+  end
+
+  it "should return a deal - 3A for 130" do
+    expect(shop.checkout('AAA')).to eq(130)
+  end
+
+  it "should return a deal - 2B for 90" do
+    expect(shop.checkout('BB')).to eq(45)
+  end
+
+  it "should return a complex amount" do
+    expect(shop.checkout('AABACD')).to eq(195)
+  end
+
+
 end
