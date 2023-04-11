@@ -1,8 +1,9 @@
 # Checkout
-Calculate total price of items - outputs intger
+Calculate total price of items - outputs integer
 
 Offer on some items - if statement 
 
+```
 +------+-------+----------------+
 | Item | Price | Special offers |
 +------+-------+----------------+
@@ -11,13 +12,13 @@ Offer on some items - if statement
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+
+```
 
-If input illegal return -1
+If input illegal return `-1`
 illegal = lowercase letter, grammatical character, integer
 
 INPUT | OUTPUT
 ------|-------
-
 shop.checkout('A') | 50
 shop.checkout('B') | 30
 shop.checkout('C') | 20
@@ -30,5 +31,5 @@ shop.checkout('aBc') | -1
 shop.checkout('-B8x')| -1
 shop.checkout(18) | -1
 
-Class - Shop
-Method - checkout(sku)
+Class: `Shop`
+Method: `checkout(sku)`
